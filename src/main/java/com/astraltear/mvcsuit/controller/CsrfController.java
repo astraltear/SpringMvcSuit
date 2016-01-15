@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/csrf")
-public class CsrfTestController {
+public class CsrfController {
 	
 	@RequestMapping("/main")
 	public String csrfMain() {

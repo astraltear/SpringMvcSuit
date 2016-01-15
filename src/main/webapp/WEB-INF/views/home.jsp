@@ -507,7 +507,13 @@ $(document).ready(function() {
 
 	$("a.textLink").click(function(){
 		var link = $(this);
-		$.ajax({ url: link.attr("href"), dataType: "text", success: function(text) { MvcUtil.showSuccessResponse(text, link); }, error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, link); }});
+		$.ajax(
+			{ 
+				url: link.attr("href"), 
+				dataType: "text", 
+				success: function(text) { MvcUtil.showSuccessResponse(text, link); }, 
+				error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, link); }
+			});
 		return false;
 	});
 
