@@ -43,3 +43,6 @@ spring-webmvc 4.2.2.RELEASE
 	
 
 ## @RequestHeader @RequestParam @CookieValue @RequestBody HttpEntity
+
+
+## 전통적인 HttpServletRequest HttpServletResponse  Writer OutputStream HttpSession
