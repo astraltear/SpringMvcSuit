@@ -1,4 +1,12 @@
 spring-webmvc 4.2.2.RELEASE
+Security (used for CSRF protection only)
+Jackson JSON Processor
+JSR 303 with Hibernate Validator
+JAXB2
+Rome Atom+RSS
+Joda Time Library
+File Upload 
+ 
 
 ## <beans:import resource="./controllers.xml" />
 
@@ -48,3 +56,5 @@ spring-webmvc 4.2.2.RELEASE
 ## 전통적인 HttpServletRequest HttpServletResponse  Writer OutputStream HttpSession
 
 ## ResponseEntity
+
+## json, rss, atom read write
