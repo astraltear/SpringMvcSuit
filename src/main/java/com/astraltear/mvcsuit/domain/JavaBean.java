@@ -1,4 +1,4 @@
-package com.astraltear.mvcsuit.controller;
+package com.astraltear.mvcsuit.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

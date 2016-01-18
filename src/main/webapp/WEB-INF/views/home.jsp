@@ -523,7 +523,16 @@ $(document).ready(function() {
 	$("form.textForm").submit(function(event) {
 		var form = $(this);
 		var button = form.children(":first");
-		$.ajax({ type: "POST", url: form.attr("action"), data: "foo", contentType: "text/plain", dataType: "text", success: function(text) { MvcUtil.showSuccessResponse(text, button); }, error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, button); }});
+		$.ajax(
+				{ 
+					type: "POST", 
+					url: form.attr("action"), 
+					data: "foo", 
+					contentType: "text/plain", 
+					dataType: "text", 
+					success: function(text) { MvcUtil.showSuccessResponse(text, button); }, 
+					error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, button); }
+				});
 		return false;
 	});
 

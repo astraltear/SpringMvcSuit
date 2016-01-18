@@ -40,3 +40,6 @@ spring-webmvc 4.2.2.RELEASE
 	
 	ProducesConsumesController
 	@RequestMapping( value="/producesconsumesControl", produces="application/json")
+	
+
+## @RequestHeader @RequestParam @CookieValue @RequestBody HttpEntity
