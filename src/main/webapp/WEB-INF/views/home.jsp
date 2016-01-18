@@ -60,10 +60,7 @@
 				<a id="byPath" class="textLink" href="<c:url value="/mapping/path" />">By path</a>
 			</li>
 			<li>
-				<a id="byPathPattern" class="textLink" href="<c:url value="/mapping/path/wildcard" />">By path pattern</a>
-			</li>
-			<li>
-				<a id="byMethod" class="textLink" href="<c:url value="/mapping/method" />">By path and method</a>
+				<a id="byPathPattern" class="textLink" href="<c:url value="/mapping/path/anywhere" />">By path pattern</a>
 			</li>
 			<li>
 				<a id="byParameter" class="textLink" href="<c:url value="/mapping/parameter?foo=bar" />">By path, method, and presence of parameter</a>
@@ -574,7 +571,16 @@ $(document).ready(function() {
 		var data = form.hasClass("invalid") ?
 				"{ \"foo\": \"bar\" }" : 
 				"{ \"foo\": \"bar\", \"fruit\": \"apple\" }";
-		$.ajax({ type: "POST", url: form.attr("action"), data: data, contentType: "application/json", dataType: "text", success: function(text) { MvcUtil.showSuccessResponse(text, button); }, error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, button); }});
+		$.ajax(
+				{ 
+					type: "POST", 
+					url: form.attr("action"), 
+					data: data, 
+					contentType: "application/json", 
+					dataType: "text", 
+					success: function(text) { MvcUtil.showSuccessResponse(text, button); }, 
+					error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, button); }
+				});
 		return false;
 	});
 
@@ -643,7 +649,14 @@ $(document).ready(function() {
 
 	$("#byHeader").click(function(){
 		var link = $(this);
-		$.ajax({ url: this.href, dataType: "text", beforeSend: function(req) { req.setRequestHeader("FooHeader", "foo"); }, success: function(form) { MvcUtil.showSuccessResponse(form, link); }, error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, link); }});
+		$.ajax(
+				{ 
+				url: this.href, 
+				dataType: "text", 
+				beforeSend: function(req) { req.setRequestHeader("FooHeader", "foo"); }, 
+				success: function(form) { MvcUtil.showSuccessResponse(form, link); }, 
+				error: function(xhr) { MvcUtil.showErrorResponse(xhr.responseText, link); }
+				});
 		return false;
 	});
 
