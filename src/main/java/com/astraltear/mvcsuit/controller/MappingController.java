@@ -2,6 +2,8 @@ package com.astraltear.mvcsuit.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/mapping/*")
 public class MappingController {
+	
+	private static final Logger log = LoggerFactory.getLogger(MappingController.class);
+
 	
 	@RequestMapping("/path")
 	@ResponseBody
@@ -59,6 +64,14 @@ public class MappingController {
 	@RequestMapping(value="/produces", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public JavaBean byProducesJson() {
+		log.info("byProducesJson byProducesJson byProducesJson byProducesJson byProducesJson");
+		return new JavaBean();
+	}
+
+	@RequestMapping(value="/produces", method=RequestMethod.GET, produces=MediaType.APPLICATION_XML_VALUE)
+	@ResponseBody 
+	public JavaBean byProducesXml() {
+		log.info("byProducesXml byProducesXml byProducesXml byProducesXml");
 		return new JavaBean();
 	}
 	
