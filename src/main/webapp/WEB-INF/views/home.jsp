@@ -158,14 +158,6 @@
 				</li>			
 			</ul>
 		</div>
-		<div id="customArgs">
-			<h3>Custom Resolvable Web Arguments</h3>	
-			<ul>
-				<li>
-					<a id="customArg" class="textLink" href="<c:url value="/data/custom" />">Custom</a>			
-				</li>
-			</ul>
-		</div>
 	</div>
 	<div id="responses">
 		<h2>Response Writing</h2>

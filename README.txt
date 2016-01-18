@@ -46,3 +46,5 @@ spring-webmvc 4.2.2.RELEASE
 
 
 ## 전통적인 HttpServletRequest HttpServletResponse  Writer OutputStream HttpSession
+
+## ResponseEntity
