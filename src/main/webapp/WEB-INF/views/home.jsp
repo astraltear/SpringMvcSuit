@@ -34,7 +34,7 @@
 		<li><a href="#exceptions">Exception Handling</a></li>
 		<li><a href="#redirect">Redirecting</a></li>
         <li><a href="#async">Async Requests</a></li>
-         <li><a href="#csrf">csrf</a></li>
+         <li><a href="#etc">etc</a></li>
     </ul>
     <div id="simple">
 		<h2>Simple</h2>
@@ -422,8 +422,13 @@
 		</li>
 		</ul>
 	</div>
-	<div id="csrf">
-		<a href="${pageContext.request.contextPath}/csrf/main">csrf test</a>
+	<div id="etc">
+		<li>
+			<a href="${pageContext.request.contextPath}/csrf/main">csrf test</a>
+		</li>
+		<li>	
+			<a href="<c:url value="/sessmodelAttr/view" />">SessionAttr ModelAttr test</a>
+		</li>
 	</div>
 </div>
 <script type="text/javascript" src="<c:url value="/resources/jquery/1.6/jquery.js" />"></script>
