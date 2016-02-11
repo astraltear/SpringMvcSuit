@@ -367,6 +367,9 @@
 		</p>
 		<ul>
 			<li>
+				<a href="<c:url value="/redirect/astraltear" />">redirect</a>
+			</li>
+			<li>
 				<a href="<c:url value="/redirect/uriTemplate" />">URI Template String</a>
 			</li>
 			<li>
